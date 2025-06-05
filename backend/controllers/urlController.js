@@ -57,6 +57,7 @@ exports.redirectShortUrl = async (req, res) => {
     await urlDoc.save();
 
     res.redirect(urlDoc.longUrl);
+    
   } catch (err) {
     res.status(500).json({ message: "Server error" });
   }
